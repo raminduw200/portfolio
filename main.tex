@@ -1,0 +1,694 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{grey}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome5}
+\usepackage{tabto}
+\usepackage[super]{nth}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+% if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.825]{geometry}
+\usepackage{multicol}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Ramindu}{Walgama}
+\title{Data Scientist}                               % optional, remove / comment the line if not wanted
+\address{Colombo, Sri Lanka}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+ %\phone[mobile]{(+88)0 1718268856}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+% \email{xpan1@swarthmore.edu}                               % optional, remove / comment the line if not wanted
+% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
+% \extrainfo{}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+  
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\setlength{\tabcolsep}{12pt}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+
+
+% \input{body}
+% \newpage
+
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace*{-13mm}
+
+\begin{center}
+\begin{tabular}{ c c c c c}
+ %\faGlobe\enspace sites.google.com  
+ \faEnvelope\enspace w.ramindu@gmail.com & \faMobile\enspace (+94) 76 772 4805 & \faGraduationCap\enspace \href{https://scholar.google.com/citations?user=vKtcLu0AAAAJ&hl=en}{Ramindu Walgama} \\ 
+ \href{https://lk.linkedin.com/in/ramindu-walgama}{\faLinkedin\enspace: Ramindu Walgama} & \href{https://lk.linkedin.com/in/ramindu-walgama}{\faGithub\enspace raminduw200} & \faResearchgate\enspace \href{https://www.researchgate.net/profile/Ramindu-Walgama}{Ramindu Walgama} \\ 
+\end{tabular}
+\end{center}
+
+% \section{RESEARCH \& TEACHING INTERESTS}
+\section{RESEARCH INTERESTS}
+ Computer Vision, Federated Learning, Deep Learning, Generative AI
+% \newpage
+\section{EDUCATION}
+
+{\customcventry{2021 - 2025}{B.Sc. (Hons) in Computer Science}{University of Colombo School of Computing (UCSC)}{Colombo, Sri Lanka}{}{}}
+\textbf{Grade:} First Class Honours (GPA - 3.7 | \textbf{92.5\%}). \\
+\textbf{Awards: Directors list} in Year 2 Semester 2 and Year 4 Semester 2 \\
+
+% CIRCLES.LIFE award for the best final year research project.\\
+
+
+{\customcventry{2020-2024}{B.Eng (Hons) in Software Engineering}{University of Westminster}{London, United Kingdom}{}{}}
+\vspace{1.5mm}
+
+\textbf{Grade:} First Class Honours (Average - 78\% | \textbf{Batch Top 5}). \\
+\textbf{Awards: All-Round Performance} in BEng (Hons) Software Engineering Convocation Award. \\
+% CIRCLES.LIFE award for the best final year research project.\\
+\textbf{Studied at:} Informatics Institute of Technology, Sri Lanka. 
+
+
+\section{EXPERIENCE}
+
+{\customcventry{May 2024 - Present}{IFS R\&D International (Pvt) Ltd}{Data Scientist}{Full-Time}{}{}
+\vspace{1mm}
+\begin{itemize}
+    % \item \textbf{Research} - Autonomous Visual Detection of Bio-hazards Locations with Aerial Drones.
+    \item Worked on Research and Development work, including Retrieval-Augmented Generation (RAG) and Python ML-based projects, including Time Series Forecasting, Time Series Anomaly Detection, and Tabular Models, and deployed artifacts such as Helm Charts and Docker images. Deployed and managed hosted Azure resources on a shared platform through Terraform and bash scripts.
+    \item Configured Grafana dashboards for Seldon services using Prometheus for monitoring.
+    \item Integrated and replaced Seldon with KServe for existing services. Developed custom Azure indexers for GPT models and built an answer re-ranking system. 
+\end{itemize}
+}
+\vspace{4mm}
+
+
+{\customcventry{Jan 2025 - Present}{Informatics Institute of Technology (IIT Campus)}{Visiting Lecturer}{Part-Time}{}{}
+\vspace{1mm}
+\begin{itemize}
+    % \item \textbf{Research} - Autonomous Visual Detection of Bio-hazards Locations with Aerial Drones.
+    \item Evaluate final-year research projects and assess students' OOP coursework, vivas, and ICT assignments. Supervise final-year research in the domains of Computer Vision and Federated Learning.
+\end{itemize}
+}
+\vspace{4mm}
+
+
+{\customcventry{Nov 2023 - May 2024}{IFS R\&D International (Pvt) Ltd}{Data Science Intern}{Full-Time}{}{}{}
+\vspace{1mm}
+\begin{itemize}
+    \item I was the \textbf{first Data Science intern} at IFS Sri Lanka.
+    \item Mainly worked with Research and Development work and gain experience in C\# for bug fixing in the gateway for all ML use\-cases at IFS.
+    \item Implemented logging mechanisms with ELK stack and deployed web apps on Azure using FastAPI and Bitbucket Pipelines.
+    \item Designed UIs using Figma. Completed the implementation of two applications using React, Angular.
+\end{itemize}
+}
+\vspace{4mm}
+
+{\customcventry{Jan 2023 - Jun 2023}{NTENDER - Australian Startup Company}{Software Engineer}{Part-Time}{}{}
+% \vspace{1mm}
+\begin{itemize}
+    \item Worked on a customer churn model. Developed a PDF text extraction tool using Python. 
+    \item Built an ML evaluation dashboard with Streamlit to visualize model performance graphs for the startup's Minimum Viable Product (MVP).
+\end{itemize}
+}
+\vspace{4mm}
+
+{\customcventry{Jul 2021 - Jun 2022}{IFS R\&D International (Pvt) Ltd }{Software Engineering Intern}{Full-Time}{}{}
+% \vspace{1mm}
+\begin{itemize}
+    \item Achieved 100\% test coverage using Test-A Rest (TAR) and conducted unit tests with Oracle SQL. Debugged and implemented solutions.
+    \item Independently developed three automated tools using Python and Bash to streamline processes and detect errors.
+    \item Recognized for \textbf{exceptional contributions} during both releases I worked on, gaining experience across the full release life cycle.
+\end{itemize}
+}
+\vspace{4mm}
+
+
+\section{PUBLICATIONS}
+% \subsection{}
+% \subsection{2025-2026}
+    \begin{itemize}
+        \item \textbf{R. Walgama} and K. T. Y. Mahima, "FL-CycleGAN: Enhancing Mobile Photography with Federated Learning-Enabled CycleGAN," 2024 Moratuwa Engineering Research Conference (MERCon), Moratuwa, Sri Lanka, 2024, pp. 688-693, doi: \href{https://ieeexplore.ieee.org/document/10688983}{10.1109/MERCon63886.2024.10688983}.
+        \begin{itemize}
+          \item \textbf{Summary}: Developed a secure Federated Mobile Image Enhancement method using CycleGAN. First-ever research to address distributed Image enhancement and first ever research to use CycleGAN for mobile image enhancement. The proposed solution exceeds state-of-the-art models, achieving a processing speed improvement of 100x and requiring less GPU usage for processing high-resolution images. The generated images exhibit enhanced colors and quality. The research was evaluated by over 26 academic and industry experts.
+        \end{itemize}
+    \end{itemize}
+\vspace{3mm}
+
+\subsection{Manuscripts Under Review}
+\begin{itemize}
+    \item \textbf{R. Walgama}, K.T.Yasas Mahima, Ajantha S. Atukorale. “AdvDet: Diffusion Inspired Image Watermarking Against Adversarial Attacks” - Submitted to 22nd International Conference on Artificial Intelligence Applications and Innovations (AIAI) Conference (ICORE Conference Ranking C) \href{https://www.researchgate.net/publication/393853004_AdvDet_Diffusion_Inspired_Image_Watermarking_Against_Adversarial_Attacks}{\textbf{Link to ResearchGate}}
+    \begin{itemize}
+      \item \textbf{Summary} : This study proposes a novel adversarial input detection method inspired by diffusion models. The proposed solution can be described using three stages. First, it iteratively adds noise to the image as a watermark before transmitting it through the network. Then, at the receiver's end, a diffusion-inspired denoiser extracts these noise layers, aiming to purify the perturbations added by the attacker. Finally, a classification network is used to determine whether the denoised image originates from an adversarially corrupted input. The extensive experiments demonstrate that AdvDet can achieve up to 99.9\% average accuracy across different attacks and above 94\% accuracy across different datasets. Further, AdvDet is able to identify adversarial inputs in less than half a second.
+    \end{itemize}
+\end{itemize}
+\vspace{2mm}
+
+\begin{itemize}
+    \item Tufayl A., \textbf{R. Walgama}. “Deep Learning for Audio-Visual Segmentation: A review of models, datasets, and challenges” - Submitted to Image and Vision Computing | Science Direct Journal (Impact Factor: 4.2) \href{https://drive.google.com/file/d/1jQYK5qUOx9gVn0M7Dt5FGWJVcJ8i0cMx/view?usp=sharing}{\textbf{Link to Drive}}
+    \begin{itemize}
+      \item \textbf{Summary} : This study highlights Audio-Visual Segmentation (AVS) where AVS is the task of producing pixel-level masks for sound-producing objects within video frames. This article provides a comprehensive review of the AVS field, detailing its core challenges, such as mixed audio, visual dominance, and cross-modal alignment. The core of this review is a detailed analysis of modern methodologies, which we categorize into four architectural paradigms: (1) Encoder-Fusion-Decoder, (2) Encoder-Query-Decoder, (3) Encoder-Latent-Decoder, and (4) Encoder-Prompt-Decoder. A comparative analysis reveals distinct trends: Transformer-based visual encoders consistently outperform CNNs, and the Encoder-Prompt-Decoder paradigm, which leverages large foundation models like SAM, demonstrates state-of-the-art performance by reframing the task. We also highlight the growing impact of Multimodal Large Language Models (MLLMs) as reasoning engines for complex referring segmentation tasks.
+    \end{itemize}
+\end{itemize}
+\vspace{2mm}
+% \begin{itemize}
+%      \item \textbf{K.T.Yasas Mahima}, Asanka G. Perera, Sreenatha Anavatti and Matt Garrat. “FlowInject: A Security Analysis of Adversarial Black Box Sensor Attacks against LiDAR Scene Flow Estimation” 
+%     % :  
+%     % \href{https://drive.google.com/file/d/1hUr8VVm3HhkfS5GazGW13zcsv6NuF2uv/view?usp=sharing}{\textbf{PDF \faExternalLink}}
+%     %   \begin{itemize}
+%     %   \item \textbf{Summary} : This article summarises the latest adversarial attacks and defense methodologies introduced on computer vision models in autonomous vehicles. Finally, it discusses the open research problems in autonomous vehicles and adversarial machine learning. In parallel to that, the importance of a generalized adversarial defense solution for adversarial attacks and physical world adversarial conditions is highlighted. 
+%     % \end{itemize}
+% % \vspace{2mm}
+% %     \item  Ashmari Pramodya, \textbf {Mahima, K.T.Yasas}, Randil Pushpananda, Ruvan Weerasinghe. "Exploring Low-resource Neural Machine Translation for Sinhala-Tamil Language Pair." - Submitted to the ICTer 2023 conference.
+% \end{itemize}
+% \vspace{3mm}
+
+
+
+
+\subsection{Manuscripts In Preparation}
+% \begin{itemize}
+%     \item \textbf{K.T.Yasas Mahima}, Mohamed Ayoob and Guhanathan Poravi. “ATERT: Adversarial Training with Enhanced Random Transformations to Defending against Digital and Physical World Adversaries on Autonomous Driving”
+%     \begin{itemize}
+%       \item \textbf{Summary} : This study presents a model re-training pipeline via curriculum adversarial training with PGD attack samples and a novel image transformation method named ERT to improve the models' robustness against adversarial attacks and physical world corruptions. The ERT is a random and mix-up transformation method which was inspired by previous research AugMix and BaRT.
+%     \end{itemize}
+% \end{itemize}
+
+
+% \begin{itemize}
+%     \item \textbf{R. Walgama}, K.T.Yasas Mahima, Ajantha S. Atukorale. “Generative Networks into Adversarial Attacks and Defenses"
+%     \begin{itemize}
+%       \item \textbf{Summary} : This journal paper aims to provide a detailed analysis of existing literature on attacks and defenses in generative networks.
+%     \end{itemize}
+% \end{itemize}
+
+\begin{itemize}
+    \item Tufayl A., \textbf{R. Walgama} “Reasoning with Sound and Vision: A Novel Method of Audio-Visual Segmentation" 
+    \begin{itemize}
+      \item \textbf{Summary} : A conference paper on audio-visual segmentation using the SAM2 model, combining audio embeddings, visual embeddings, and optical flow.
+    \end{itemize}
+\end{itemize}
+
+% \begin{itemize}
+%     \item Chamath Wanigasooriya, Indrajith Ekanayake, \textbf{R. Walgama} “NimbusGuard: A Novel Framework for Proactive Kubernetes Autoscaling Using Deep Q-Networks" 
+%     \begin{itemize}
+%       \item \textbf{Summary} : Applying reinforcement learning to Kubernetes autoscaling represents a niche and relatively underexplored research area.
+%     \end{itemize}
+% \end{itemize}
+\vspace{2mm}
+
+
+\section{Projects}
+{\customcventry{May 2023 - Nov 2023}{Team PassportPerfect}{OneID | Multiplatform}{}{}{}
+\begin{itemize}
+    \item A mobile app to keep all identity cards in one place, eliminating the
+need to carry physical ID cards as long as virtual clone cards act the
+same way as physical cards.
+    \item The app includes ID/passport photo validation for mobile phone
+photos and studio photos based on ICAO guidelines with real-time
+guidance. Validate each ICAO guideline using OpenCV and CNN
+machine learning model with combining research models.
+    \item I led the 6 member team.
+\end{itemize}
+
+\vspace{2mm}
+
+{\customcventry{Sep 2020 Apr 2021}{Team Convergent}{Thyme | Mobile App}{}{}{}
+\begin{itemize}
+    \item A meal suggestion app based on the user s illness.
+    \item Hosted the LSTM RNN Machine Learning model on the Heroku
+server, and utilized Edamam API to suggest suitable recipes.
+    \item This is a group project of 6 university students where I lead the data
+science and the backend components.
+\end{itemize}
+
+\vspace{2mm}
+
+{\customcventry{May 2022 - Jun 2022}{Associated with IFS Manufacturing Team}{MKD Beautifier | Windows App}{}{}{}
+\begin{itemize}
+    \item Individually developed a Python GUI tool to beautify tables and
+headers in markdown files, addressing rendering issues in BitBucket.
+Additionally, integrated detection for empty files and invalid Test-A
+Rest (TAR) API calls within markdown files.
+\end{itemize}
+
+\vspace{2mm}
+
+
+\section{KEY SKILLS}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{3ex}} l }
+Programming Language\ & Python, Java, C\#, PHP, Bash, JS, TypeScript \\
+ML and Deep Learning\ & Keras, Tensorflow, PyTorch, Scikit Learn, Open CV, NLTK  \\
+Frameworks\ & Flower Framework, Weights and Biases (WnB), FastAPI, Flask, Visdom,\\ \ & Angular, React, Play Framework \\
+DevOps \& MLOps \ & Helm, Kubernetes, Docker, ArgoCD, ArgoWorkflow, Seldon, KServe, \\ \ & Terraform, Prometheus, Grafana \\
+Databases\ & Oracle SQL, MongoDB, Azure, Storage, MySQL, Firebase\\
+Services\ & Azure, AWS  \\
+Other Technical Skills\ & LaTeX, Git, Linux, Mac, Vim, Kaggle, Colab \\
+Soft skills\ & Leadership Experience, Creative Problem Solving, Analytical Skills, \\ \ & Work under minimum supervision, Project Management 
+\end{tabular}
+
+
+% \newpage
+\section{HONOURS AND AWARDS}
+
+{\customcventry{\href{https://drive.google.com/file/d/1QZED1Lla8mexRRebBBlYmjVq6rEvO7Vy/view}{Certificate Link}}{\textbf{Issued by:} Moratuwa Engineering Research Conference}{Best Research Paper under Computer Vision and Image Processing Category}{Aug 2024}{}{}
+% \vspace{1mm}
+\begin{itemize}
+    \item Awarded for “FL-CycleGAN: Enhancing Mobile Photography with Federated Learning-Enabled CycleGAN” paper.
+\end{itemize}
+}
+\vspace{4mm}
+
+{\customcventry{\href{https://drive.google.com/file/d/10CczydUxSI6ZG-LfUBWo70hrMBN-WNKX/view?usp=sharing}{Certificate Link}}{\textbf{Issued by:} University of Westminster}{All Rounder Performance Award - BEng. Software Engineering}{Aug 2024}{}{}
+% \vspace{1mm}
+\begin{itemize}
+    \item University Convocation Award for All-Round Performance at IIT, awarded out of 253 Software Engineering students.
+\end{itemize}
+}
+\vspace{4mm}
+
+{\customcventry{\href{https://drive.google.com/drive/folders/1COCt-C0tQznGBZDy87bYgIMa1VicN2SG?usp=sharing}{Certificate Link}}{\textbf{Issued by:} University of Sri Jayewardenepura}{Best Innovator - 1st Runner up}{Dec 2025}{}{}
+% \vspace{1mm}
+\begin{itemize}
+    \item Awarded at the Sri Jayawardenepura award ceremony, known as the J’pura Employability Skills Awards (JESA), after evaluation through multiple interviews.
+\end{itemize}
+}
+\vspace{4mm}
+
+{\customcventry{\href{https://drive.google.com/file/d/10Ie0z4RtOMJYYwYMT58ktoiPhwBFRfgm/view?usp=sharing}{Certificate Link}}{\textbf{Issued by:} Informatics Institute of Technology (IIT)}{Best Research in Bronze 1 - IIT Excellence Awards 2024}{Oct 2024}{}{}
+% \vspace{1mm}
+\begin{itemize}
+    \item FL\-CycleGAN research was recognized as the Best Research in the Bronze I category at the IIT Excellence Awards 2024. Notably, there were no Gold or Silver category winners this year.
+\end{itemize}
+}
+\vspace{4mm}
+
+{\customcventry{\href{https://drive.google.com/file/d/1QXCoSHu6Gj4BnubKCaYhVyhvRCIKqsSK/view?usp=sharing}{Certificate Link}}{\textbf{Issued by:} Informatics Institute of Technology (IIT)}{Cutting Edge 1st Runner up under Technical Research and Development Category}{Sep 2024}{}{}
+% \vspace{1mm}
+\begin{itemize}
+    \item Awarded for FL-CycleGAN: Enhancing Mobile Photography with Federated Learning-Enabled CycleGAN research.
+\end{itemize}
+}
+\vspace{4mm}
+
+{\customcventry{}{\textbf{Recognized by:} University of Colombo School of Computing(UCSC)}{Nominee for Best Industrial Training Student 2023}{Sep 2024}{}{}
+% \vspace{1mm}
+\begin{itemize}
+    \item Out of 350 undergraduates, I’ve been nominated as one of 8 for the Best Industrial Trainee Award.
+\end{itemize}
+}
+\vspace{4mm}
+
+
+% \section{SELECTED ACADEMIC PROJECTS}
+
+% {\customcvproject{A general defense framework for defending against adversarial\\  \textbf{attacks and physical world adversaries on autonomous driving.}}{May 2021-May 2022}
+%   {\begin{itemize}
+%     \item Develop and evaluate a model training pipeline that is able to make the existing image classification models in autonomous vehicles robust for both man-made adversarial attacks and physical world adversaries without using auxiliary tools in the inference.
+%     \item Submitted in fulfilment of the undergraduate research project of the degree program.
+%      \item \textbf{Supervisor -} Mr. Guhanathan Poravi : guhanathan.p@iit.ac.lk
+%      \item \textbf{Thesis -} \href{https://drive.google.com/file/d/1OEC6MlCkcLg5WU8KYiSadlKgFSry0bVE/view?usp=sharing}{\textbf{PDF \faExternalLink}}
+%   \end{itemize}
+%   }
+% }
+
+% {\customcvproject{A semantic segmentation based approach for human count \\ \textbf{estimation in aerial images.}}{December 2020 – June 2021}
+% {\begin{itemize}
+%   \item A research project by \href{https://scorelab.org}{ScoreLab} from the School of Computing, University of Colombo, Sri Lanka to estimate the number of humans in an outdoor meeting using drone-based aerial images. 
+%    \item \textbf{Supervisors -} 
+%     \begin{itemize}
+%       \item{Prof. Kasun De Zoysa : \email{kasun@ucsc.cmb.ac.lk}{kasun@ucsc.cmb.ac.lk}}
+%       \item{Mr T.N.D.S. Ginige : \email{thepul@ucl.lk}{thepul@ucl.lk}}
+%     \end{itemize}
+% \end{itemize}
+% }
+% }
+
+% {\customcvproject{INFERNO - A forest fire and spread prediction tool for Australia.}{August 2019 – May 2020}
+% {\begin{itemize}
+%   \item Predicting future forest fires based on global weather statistics using time series analysis via long short-term memory (LSTM) networks.
+%   \item Predicting spread of the potential forest fires using machine learning algorithms. 
+%   \item \textbf{Awards - } 
+%     \begin{itemize}
+%       \item{Got a merit award at IIT Cutting Edge 2020}.
+%       \item{Selected for semi-finals at NBQSA 2020}.
+%     \end{itemize}
+% \end{itemize}
+% }
+% }
+% \vspace{1mm}
+% \href{https://github.com/yasasmahima}{\textbf{View More \ \faExternalLink}}
+
+% \section{PROFESSIONAL RECOGNITION}
+% \begin{itemize}
+%           \item Advanced Data Science with IBM - IBM Watson IoT Certified Data Scientist : Offered through Coursera
+%           \vspace{1mm}
+%           \item DeepLearning.AI TensorFlow Developer : Offered through Coursera
+%           \vspace{1mm}
+%           \item Big Data Specialisation by University of California San Diego : Offered through Coursera
+%           \vspace{1mm}
+%           \item Big Data Analytics Specialisation by Yandex : Offered through Coursera
+% \end{itemize}
+% \vspace{1mm}
+% \href{www.linkedin.com/in/yasas-mahima}{\textbf{View More \ \faExternalLink}}
+
+
+
+\section{COMPETITIONS}
+{\customcventry{\href{https://drive.google.com/file/d/1B68mrlVufR1wj9wziJUAQw53lk8MHQJY/view?usp=sharing}{Certificate Link}}{Issued by: Google}{Google Hashcode | Sri Lanka Rank: \#25 | Global rank: 4319}{Feb 2020}{}{}
+\vspace{2mm}
+
+{\customcventry{\href{https://drive.google.com/drive/folders/1vbSjPaNKWiFDMNE0yOysVQfqCo37Z24a?usp=sharing}{Certificate Link}}{Issued by: IEEE}{IEEEXtreme 16.0 | Sri Lanka Rank: \#61}{Oct 2022}{}{}
+\vspace{2mm}
+
+{\customcventry{\href{https://drive.google.com/file/d/18x9wpOkZUEuF2BB5Bfazoa-L3fTW_hho/view?usp=sharing}{Certificate Link}}{Issued by: Graduate Associate
+Professionals (GapHQ)}{InnoJet | Finalist}{Dec 2024}{}{}
+\vspace{2mm}
+
+{\customcventry{\href{https://drive.google.com/file/d/14VslLUm1xVKysfiJGn4qJVht3GWIIhui/view?usp=sharing}{Certificate Link}}{Issued by: Mozilla Campus Club and FOSS Community of IIT}{OpenHack 2.0 | Winner}{Feb 2023}{}{}
+\vspace{2mm}
+
+{\customcventry{\href{https://drive.google.com/drive/folders/1v9rcTVmaAN_bbVuBKvkVqSSuXEV09kRr?usp=sharing}{Certificate Link}}{Issued by: IEEE WIE IIT}{PyHack 2.0 | $1^{st}$ Runner up}{Sep 2023}{}{}
+\vspace{2mm}
+
+{\customcventry{\href{https://drive.google.com/file/d/1sYpfZTtbgbVUyXE4JG0Q7C7mwbAfhEDE/view?usp=sharing}{Certificate Link}}{Issued by: IEEE WIE Student Branch Affinity group of Kotelawala Defence University}{CYPHER | 2nd Runner up}{May 2023}{}{}
+\vspace{2mm}
+
+{\customcventry{\href{https://drive.google.com/file/d/10Nyod454WmqFrOU-9SgUIc0Kudn8yrvy/view?usp=sharing}{Certificate Link}}{Issued by: Rootcode}{Tech-Triathlon | Finalists}{Oct 2024}{}{}
+\vspace{2mm}
+
+{\customcventry{\href{https://drive.google.com/file/d/10KZLa-a1sZoh7REAz3Wwq4ouUomd86nV/view?usp=sharing}{Certificate Link}}{Issued by: Octave John Keels and Stat Circle of University of Colombo}{Mini Data Science Hackathon Finalists}{Dec 2023}{}{}
+\vspace{2mm}
+
+{\customcventry{\href{https://drive.google.com/drive/folders/1bnOqpRzWeXgpXD86KlaEwHQphn_XX4BW?usp=sharing}{Certificate Link}}{Issued by: IEEE UCSC}{RevolUX 2.0 | Finalists}{Jul 2022}{}{}
+\vspace{2mm}
+
+{\customcventry{\href{https://drive.google.com/file/d/1jx_2JR6kbeXsvvDKwqdAXK8mqqP-Xj2B/view?usp=sharing}{Certificate Link}}{Issued by: UCSC ISACA}{FreshHack 2.0 | 4th place}{Dec 2021}{}{}
+\vspace{2mm}
+
+{\customcventry{\href{https://drive.google.com/file/d/1kbWKnDe9fPsfzQip-4ir--vy8CXNMEtQ/view?usp=sharing}{Certificate Link}}{Issued by: IEEE UCSC}{ReidXtreme 2021 | 5th place}{Dec 2021}{}{}
+\vspace{2mm}
+
+{\customcventry{\href{https://drive.google.com/drive/folders/1k7TEJJTZxOh0n9mlUh9zXRuowGnvzx6W?usp=sharing}{Certificate Link}}{Issued by: IFS}{IFS Midnight Summer Hackathon 2022 | Participation}{Jun 2022}{}{}
+\vspace{2mm}
+
+{\customcventry{\href{https://drive.google.com/file/d/1Qp1Lb5K8yL2vFy2N4950Z-LUdyiYJjha/view?usp=sharing}{Certificate Link}}{Issued by: Informatics Institute of Technology (IIT Campus)}{Cutting Edge Participation | Thyme Mobile App}{Jul 2021}{}{}
+\vspace{2mm}
+
+{\customcventry{}{}{Google Code Jam, Google Kick Start, IEEEXtreme, Hack This Fall, ACES Coders Participation}{}{}{}
+\vspace{-6mm}
+
+
+
+
+\section{VOLUNTEER ACTIVITIES}
+
+{\customcventry{}{Data Science Inauguration 2026 | Sri Lanka Institute of Information Technology}{Guest Speaker}{Jan 2026}{}{}
+\begin{itemize}
+    \item Conducted a “Classroom to Career” session for third-year students specializing in the Data Science degree.
+\end{itemize}}
+\vspace{4mm}
+
+{\customcventry{}{UCSC TechTalks 2025 | Professional Development Centre of UCSC, Colombo University}{Guest Speaker}{Aug 2025}{}{}
+\begin{itemize}
+    \item Conducted session about IFS AI to 3rd year undergraduates of University of Colombo School of Computing with two other IFS colleagues. 
+\end{itemize}}
+\vspace{4mm}
+
+{\customcventry{}{CodeRally 6.0 | IEEE Computer Society Student Branch Chapter of IIT}{Guest Speaker}{Jul 2025}{}{}
+\begin{itemize}
+    \item Conducted a physical session on “Demystifying Competitive Programming \& Problem Comprehension” for over 180+ undergraduates taking part in CodeRally 6.0, a 24-hour competitive programming hackathon. Shared key tips, common mistakes to avoid, and demonstrated how to break down competitive programming problems effectively with examples.
+\end{itemize}}
+\vspace{4mm}
+
+
+{\customcventry{}{Duothan 5.0 | IEEE Student Branch at NSBM Green University}{Judge Panel Member}{Jul 2025}{}{}
+\begin{itemize}
+    \item Evaluated student projects building HackerRank-style platforms, with 200+ students from 15+ universities.
+\end{itemize}}
+\vspace{4mm}
+
+{\customcventry{}{IEEE - IIT CodeSprintX Technical Pitch | Informatics Institute of Technology (IIT Campus)}{Judge Panel Member}{Jun 2025}{}{}
+\begin{itemize}
+    \item Evaluated AI projects of over 80 undergraduate teams from universities across Sri Lanka.
+\end{itemize}}
+\vspace{4mm}
+
+{\customcventry{}{Cutting Edge Competition | Informatics Institute of Technology (IIT Campus)}{Judge Panel Member}{Jun 2025}{}{}
+\begin{itemize}
+    \item Evaluated final year research projects by IIT undergraduates, and based on the scores awarded, the top projects will also be shortlisted for both Cutting Edge and the preliminary rounds of NBQSA.
+\end{itemize}}
+\vspace{4mm}
+
+{\customcventry{}{ADScAI Research Symposium 2025 | University of Moratuwa}{Research Evaluator}{April 2025}{}{}
+\begin{itemize}
+    \item Volunteered to assess and provide feedback and evaluate research posters by undergraduate and postgraduate students at the ADScAI Symposium 2025.
+\end{itemize}}
+\vspace{4mm}
+
+{\customcventry{}{}{University Project Mentor}{Sep 2024 | Feb 2025}{}{}
+\vspace{-5mm}
+\begin{itemize}
+    \item Mentored a third-year project at the University of Moratuwa.
+\end{itemize}}
+\vspace{4mm}
+
+{\customcventry{}{2nd Session 8 Weeks of Code | UCSC ACM Student Chapter}{Guest Speaker}{Jun 2023}{}{}
+% \vspace{-5mm}
+\begin{itemize}
+    \item Hackathon Hacks with Python - Session conducted for all undergraduates (1st year to final year students).
+\end{itemize}}
+\vspace{4mm}
+
+{\customcventry{}{FALLCODE | IEEE WIE Student Branch Affinity Group of UCSC}{Guest Speaker}{Nov 2023}{}{}
+\begin{itemize}
+    \item Session about introduction to Python.
+\end{itemize}}
+\vspace{4mm}
+
+{\customcventry{}{}{Organising Committee Vice President | Delegates}{May 2023 | Aug 2023}{}{}
+\vspace{-5mm}
+\begin{itemize}
+    \item Career guidance workshop called \textit{"WIWILIS: What I Wish I Learned in School"} for school leavers to fresh graduates.
+\end{itemize}}
+\vspace{4mm}
+
+{\customcventry{}{}{Organising Committee Member | External Relations}{Nov 2024 | Jan 2025}{}{}
+\vspace{-5mm}
+\begin{itemize}
+    \item Contacted companies representing at career fair. 
+\end{itemize}}
+\vspace{4mm}
+
+{\customcventry{}{}{ScholarX Mentee}{Jun 2023 | Dec 2023}{}{}
+\vspace{-5mm}
+\begin{itemize}
+    \item Mentorship programme by Sustainable Education Foundation.
+\end{itemize}}
+\vspace{2mm}
+
+
+
+
+
+
+\section{ORGANISATIONS}
+{\customcventry{}{Scientific Committee Member}{UCSC ACM Student Chapter}{Jan 2023 - Jan 2025}{}{}
+% \vspace{4mm}
+{\customcventry{}{Member}{IEEE}{Oct 2021 - Dec 2022, Sep 2024 - Dec 2025}{}{}
+{\customcventry{}{Member}{AIESEC}{Jan 2022 - Aug 2023}{}{}
+
+% \begin{itemize}
+%     \item IEEE Region 10 Symposium (TENSYMP) 2023 Conference Organising Committee.
+%     \vspace{0.75mm}
+%     \item Conducted a short talk with a demonstration on adversarial machine learning at the high school awareness session parallel to the UCSC 25th anniversary in 2022. 
+%     \vspace{0.75mm}
+%     \item Mentee at ScholarX 2021 by \href{https://sefglobal.org}{Sustainable Education Foundation (SEF)} Sri Lanka.
+%     \vspace{0.75mm}
+%     \item Software developer at ScoreLab, University of Colombo, School of Computing - 2020.
+% \end{itemize}
+
+
+
+% \section{HONOURS, AWARDS AND COMPETITIONS}
+% \begin{minipage}{\maincolumnwidth}%
+% 	\small{
+%     	\begin{itemize}
+%     % 	 \item CIRCLES.LIFE award for the best final year research project in B.Eng(Hons) Software Engineering 2021/22. 
+%     %       \vspace{1mm}
+%          \item  Australian Department of Defense Grant : \textit{April 2024}. 
+%          \vspace{1.5mm}
+%          \item  UNSW DRTG Research Training Grant (1500AUD): \textit{March 2024}. 
+%          \vspace{1.5mm}
+%          \item  UNSW NCI high-performance computing allocation grant 2024: \textit{February 2024}. 
+%         \vspace{1.5mm}
+%         \item  UNSW Tuition Fee Scholarship (TFS) with living expenses for the PhD degree : \textit{November 2022}. 
+%         \vspace{1.5mm}
+%         \item Final year project got a merit award at the NBQSA National ICT Awards 2022: \textit{November 2022}. 
+%          \vspace{1.5mm}
+%          \item Best final year project award by Circles.Life Singapore: \textit{November 2022}. 
+%          \vspace{1.5mm}
+%          \item Dr. Gamini Wickramasinghe Gold Medal for Academic Excellence (Batch Top): \textit{November 2022}. 
+%          \vspace{1.5mm}
+%           % \item First class honours degree in Software Engineering: \textit{November 2022}. 
+%           % \vspace{1.5mm}
+%           % \item Final year research was selected to present at the IIT Cutting-Edge 2022: \textit{June 2022}.
+%           % \vspace{1.5mm}
+%           \item Merit award at the IIT Cutting-Edge 2020 innovation competition for the \nth{2} year group project: \textit{June 2020}. 
+%           \vspace{1.5mm}
+%           \item \nth{2} year group project was selected for the NBQSA National ICT Awards 2020: \textit{July 2020}. 
+%           \vspace{1.5mm}
+%           \item Google Hashcode 2020 4304th place from the World and 22th place from Sri Lanka : \textit{February 2020}.
+%           \vspace{1.5mm}
+%           \item Merit award at the LetMeHack hackathon by University of Sabaragamuwa Sri Lanka: \textit{February 2020}.
+%           \vspace{1.5mm}
+%           \item Merit award at the CODEFEST software competition by Sri Lanka Institute of Information Technology (SLIIT) and 99X Technologies Sri Lanka: \textit{November 2019}.
+% 		\end{itemize}}%
+% \end{minipage}%
+
+\section{REFEREES}
+\begin{itemize}
+
+    % \item \textbf{Prof. Sudesh Wijesinghe}\\
+    % Consultant Professor, Faculty of Engineering, CINEC campus\\
+    % Consultant Professor, Faculty of Engineering, University of Sri Jayewardenepura\\
+    % Former Associate Professor, National University of Singapore\\
+    % Former Scientist, Agency for Science, Technology and Research (A*STAR), Singapore\\
+    % sudeshlw@gmail.com\\
+    % Cell: (+94) 77 843 8800
+
+    % \vspace{2mm}
+    \item \textbf{Dr. Ruvan Weerasinghe}\\
+    Academic Dean, Informatics Institute of Technology, Sri Lanka\\
+    Senior Academic, UCSC, University of Colombo, Colombo, Sri Lanka\\
+    ruvan.w@iit.ac.lk
+    % Cell: (+94) 71 388 2929
+
+    \vspace{2mm}
+    \item \textbf{Dr. Ajantha Atukorale}\\
+    Director, University of Colombo School of Computing\\
+    University of Colombo, Colombo, Sri Lanka\\
+    aja@ucsc.cmb.ac.lk\\
+    Cell: (+94) 71 388 2929
+    
+    % \vspace{2mm}
+    % \item \textbf{Dr. Kasun Gunawardana}\\
+    % Director, University of Colombo School of Computing\\
+    % University of Colombo, Colombo, Sri Lanka\\
+    % kgg@ucsc.cmb.ac.lk\\
+    % Cell: (+94) 77 383 2923
+    
+    % \vspace{2mm}
+    % \item \textbf{Dr. Asanka Sayakkara}\\
+    % Director, University of Colombo School of Computing\\
+    % University of Colombo, Colombo, Sri Lanka\\
+    % asa@ucsc.cmb.ac.lk\\
+    % Cell: (+94) 70 369 5463
+
+    % \vspace{2mm}
+    % \item \textbf{Mr. Guhanathan Poravi}\\
+    % Senior Lecturer, Department of Computing\\
+    % Informatics Institute of Technology\\
+    % guhanathan.p@iit.ac.lk\\
+    % Cell: (+94) 77 633 3330
+
+    % \vspace{2mm}
+    % \item \textbf{Mr. Isala Piyarisi}\\
+    % Senior Software Engineer\\
+    % WSO2\\
+    % isala@wso2.com\\
+    % Cell: (+94) 77 539 9367
+\end{itemize}
+      
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+% \bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+\end{document}
+
+
+%% end of file `template.tex'.
