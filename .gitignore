@@ -20,6 +20,25 @@ node_modules/
 dist/
 build/
 
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex
+*.fls
+*.fdb_latexmk
+main.pdf
+main.tex
+
+# LaTeX files
+*.tex
+*.aux
+*.log
+*.toc
+
 # Images - host separately or use Git LFS
 images/
 *.jpg
