@@ -47,7 +47,10 @@
       "Bash(git push:*)",
       "Bash(git config:*)",
       "Bash(brew list:*)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(git rm:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit - Portfolio website with animations\n\n- Typewriter effect for hero subtitle\n- Floating background shapes\n- Scroll reveal animations\n- Enhanced hover effects\n- Dot pattern background\n- Custom SVG favicon\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")"
     ]
   }
 }
