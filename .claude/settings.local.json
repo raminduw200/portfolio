@@ -54,7 +54,8 @@
       "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate .gitignore to exclude image files\n\nAdd common image formats to gitignore since they''re better hosted\nseparately or managed via Git LFS.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate .gitignore to exclude image files\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git fetch:*)",
-      "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate Claude settings\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")"
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate Claude settings\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd git fetch to allowed prompts\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")"
     ]
   }
 }
