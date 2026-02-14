@@ -50,7 +50,9 @@
       "Bash(git reset:*)",
       "Bash(git rm:*)",
       "Bash(git add:*)",
-      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit - Portfolio website with animations\n\n- Typewriter effect for hero subtitle\n- Floating background shapes\n- Scroll reveal animations\n- Enhanced hover effects\n- Dot pattern background\n- Custom SVG favicon\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")"
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit - Portfolio website with animations\n\n- Typewriter effect for hero subtitle\n- Floating background shapes\n- Scroll reveal animations\n- Enhanced hover effects\n- Dot pattern background\n- Custom SVG favicon\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate .gitignore to exclude image files\n\nAdd common image formats to gitignore since they''re better hosted\nseparately or managed via Git LFS.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate .gitignore to exclude image files\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")"
     ]
   }
 }
