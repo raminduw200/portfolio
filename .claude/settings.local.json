@@ -43,7 +43,11 @@
       "Bash(git add index.html styles.css script.js favicon.svg .gitignore)",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit: Portfolio website with animations\n\n- Typewriter effect for hero subtitle \\(Data Scientist, Researcher, Innovator\\)\n- Floating background shapes with animations\n- Scroll reveal animations\n- Enhanced hover effects on buttons, cards, and tags\n- Subtle dot pattern background\n- Responsive design\n- Dark mode support\n- Favicon with RW initials\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit - Portfolio website with animations\n\n- Typewriter effect for hero subtitle \\(Data Scientist → Researcher → Innovator\\)\n- Floating background shapes with smooth animations\n- Scroll reveal animations for sections\n- Enhanced button hover effects with shine\n- Subtle dot pattern background for sections\n- Custom SVG favicon with RW initials\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
-      "Bash(git add -A)"
+      "Bash(git add -A)",
+      "Bash(git push:*)",
+      "Bash(git config:*)",
+      "Bash(brew list:*)",
+      "Bash(git reset:*)"
     ]
   }
 }
